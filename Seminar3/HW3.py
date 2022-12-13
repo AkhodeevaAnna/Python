@@ -9,6 +9,8 @@
 # out
 # 1011
 number = int(input())
+while number < 0:
+    number = int(input("Введите число >= 0: "))
 def Ten_to_two (n):
     list = []
     if n == 0:
