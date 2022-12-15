@@ -16,11 +16,15 @@
 N = int(input())
 one = int(input())
 two = int(input())
-list = []
-n = - N
-while n <= N:
-    list.append(n)
-    n += 1
+# list = []
+if N >= 0:
+    list = list(range(-N, N+1))
+else:
+    list = list(range(-N,N-1, -1))
+# n = - N
+# while n <= N:
+#     list.append(n)
+#     n += 1
 print(list)
 if 0 < one <= len(list) and 0 < two <= len(list):
     pr = list[one-1] * list[two-1]
