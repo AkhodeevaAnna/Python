@@ -5,6 +5,8 @@
 # - 6 -> [1, 2, 6, 24, 120, 720]
 N = int(input())
 list = []
+if N == 0:
+    list = [0]
 n = 1
 for i in range(1, N+1):
     n *= i
