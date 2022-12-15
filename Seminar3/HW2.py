@@ -22,15 +22,11 @@ def Rand_list(count):
 
 def Product_of_couple_nums(list_0):
     list_1 = []
-    l = len(list_0) // 2 # длиня для цикла
-    l_1 = len(list_0) # длина для счета
-    if len(list_0) % 2 == 0:
-        for i in range(0, l):
-            list_1.append(list_0[i] * list_0[l_1 - 1 - i])
-    else:
-        for j in range (l):
-            list_1.append(list_0[j] * list_0[l_1 - 1 - j])
-        list_1.append(list_0[l])
+    l = len(list_0)
+    for i in range(0, l // 2):
+        list_1.append(list_0[i] * list_0[l - 1 - i])
+    if len(list_0) % 2:
+        list_1.append(list_0[l // 2])
     return list_1
 
 list_00 = Rand_list(count)
