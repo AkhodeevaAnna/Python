@@ -5,9 +5,12 @@
 # [2.0, 2.25, 2.37, 2.441, 2.488, 2.522]
 # 14.071
 n = int(input())
+while n < 0:
+    n = int(input("Кол-во элементов в списке не может быть меньше 0, введите число >= 0: "))
 list = []
 sum = 0
 for i in range(1, n + 1):
     list.append(round((1 + 1 / i) ** i, 3))
     sum += list[i-1]
+print(list)
 print(sum)
